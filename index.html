@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 24th Birthday Sravaniluuu! 💕</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico:wght@400&family=Dancing+Script:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div id="loading" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-heart">💖</div>
+            <div class="loading-text">Preparing something special...</div>
+        </div>
+    </div>
+
+    <!-- Background Decorations -->
+    <div class="background-decorations">
+        <div class="floating-hearts"></div>
+        <div class="confetti-container"></div>
+        <div class="sparkles"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Hero Section -->
+        <header class="hero-section">
+            <div class="first-birthday-badge">
+                <span>Our First Birthday Together</span>
+            </div>
+            
+            <h1 class="main-title">
+                Happy 24th Birthday
+                <span class="name-highlight">Sravaniluuu!</span>
+            </h1>
+            
+            <div class="subtitle">Our First Birthday Together 💕</div>
+            
+            <!-- COUNTDOWN TIMER SECTION -->
+            <section class="countdown-section">
+                <div class="countdown-header" id="countdown-header">
+                    <span>Time until your birth moment:</span>
+                </div>
+                
+                <div class="countdown-timer" id="countdown-timer">
+                    <div class="timer-segment">
+                        <div class="timer-value" id="hours">00</div>
+                        <div class="timer-label">Hours</div>
+                    </div>
+                    <div class="timer-separator">:</div>
+                    <div class="timer-segment">
+                        <div class="timer-value" id="minutes">00</div>
+                        <div class="timer-label">Minutes</div>
+                    </div>
+                    <div class="timer-separator">:</div>
+                    <div class="timer-segment">
+                        <div class="timer-value" id="seconds">00</div>
+                        <div class="timer-label">Seconds</div>
+                    </div>
+                </div>
+
+                <div class="birth-time-info">
+                    <div class="birth-time">5:35 AM IST • August 8th, 2025</div>
+                </div>
+
+                <!-- Special celebration message (hidden by default) -->
+                <div class="celebration-message hidden" id="celebration-message">
+                    <div class="celebration-text">🎉 It's your exact birth time! ✨</div>
+                    <div class="celebration-subtext">Happy 24th Birthday, my love! 💖</div>
+                </div>
+            </section>
+            
+            <div class="age-display">
+                <span class="age-number">24</span>
+            </div>
+        </header>
+
+        <!-- Central Interactive Element -->
+        <section class="central-element">
+            <div class="interactive-heart" id="interactive-heart">
+                <div class="heart-decoration">
+                    <div class="heart-inner">
+                        <div class="heart-glow"></div>
+                    </div>
+                </div>
+                <div class="click-hint">✨ Touch the magic heart for a fairy tale surprise ✨</div>
+            </div>
+        </section>
+
+        <!-- Hidden Birthday Message -->
+        <section class="message-section hidden" id="message-section">
+            <div class="message-card">
+                <div class="message-header">
+                    <div class="message-title">A Special Message For You</div>
+                </div>
+                <div class="message-content">
+                    <div class="main-carousel">
+                        <div class="carousel-slide active">
+                            <div class="message-text">
+                                <p>My Dearest Sravaniluuu,</p>
+                                <p>eeroju not just your 24th birthday, but our very first birthday celebration together as a couple. anduke this is bit more special and close to my heart...</p>
+                                <p>but nanna watching you grow, smile, and be the amazing person you are fills my heart with so much joy... I'm so grateful that I get to celebrate this with you not only this I had many other special ocassions I celebrated with you taking from adventuorus ride to visit kukke subramanyaswamy to celebrating rcb trophy... I am grateful to cherish all these moments with you Sravaniluuu... once again a very happy birthday nanna...</p>
+                                <p class="message-signature">
+                                    With all my love,<br>
+                                    <strong>Your Boo 💖</strong>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="bday-wish.png" alt="nuve cutie">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="bday-wish-3.png" alt="muah">
+                        </div>
+                    </div>
+                    <div class="carousel-navigation">
+                        <span class="nav-dot active" onclick="showSlide(1)">manasulo maata..</span>
+                        <span class="nav-dot" onclick="showSlide(2)">🧡🌊</span>
+                        <span class="nav-dot" onclick="showSlide(3)">👉👈</span>
+                    </div>
+                </div>
+                <button class="close-message" id="close-message">sare.. nenellostha..</button>
+            </div>
+        </section>
+
+        <!-- Decorative Elements -->
+        <div class="decorative-elements">
+            <div class="romantic-frame"></div>
+            <div class="celebration-text">🎉 First Birthday Together! 🎉</div>
+        </div>
+    </main>
+
+    <!-- Particle Effects Container -->
+    <div id="particle-container"></div>
+
+    <script src="app.js"></script>
+    <script>
+        let currentSlideIndex = 1;
+        
+        function showSlide(n) {
+            let slides = document.getElementsByClassName('carousel-slide');
+            let dots = document.getElementsByClassName('nav-dot');
+            
+            currentSlideIndex = n;
+            
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove('active');
+            }
+            
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.remove('active');
+            }
+            
+            slides[n - 1].classList.add('active');
+            dots[n - 1].classList.add('active');
+        }
+    </script>
+</body>
+</html>
